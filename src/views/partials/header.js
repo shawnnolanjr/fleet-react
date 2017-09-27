@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import logo from '../../images/logo.svg';
 import '../../css/header.css';
 import Button from 'react-bootstrap/lib/Button';
+import Alert from 'react-bootstrap/lib/Alert';
 
 class FleetHeader extends Component {
 	render() {
 		function someCallback() {
 			alert('called back');
+		}
+		function ohThis() {
+			return 'hey there';
 		}
 		return (
 			<div className="FleetHeader">
@@ -20,6 +24,7 @@ class FleetHeader extends Component {
 				<Button bsStyle="success" bsSize="small" onClick={someCallback}>
 					Something
 				</Button>
+				<Alert closeLabel={ohThis}/>
 			</div>
 		);
 	}
