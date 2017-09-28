@@ -14,7 +14,6 @@ class Dashboard extends Component {
 				<div className="container">
 					<div className="row">
 						{names.map(function(object, i){
-							console.log('i', i.toString());
 							return <div className="col-md-12"><Welcome name={object} /></div>;
 						})}
 					</div>
