@@ -7,10 +7,10 @@ import Alert from 'react-bootstrap/lib/Alert';
 class FleetHeader extends Component {
 	render() {
 		function someCallback() {
-			alert('called back');
+			console.log('some kind of callback')
 		}
 		function ohThis() {
-			return 'hey there';
+			console.log('we should close the alert now.');
 		}
 		return (
 			<div className="FleetHeader">
@@ -24,7 +24,7 @@ class FleetHeader extends Component {
 				<Button bsStyle="success" bsSize="small" onClick={someCallback}>
 					Something
 				</Button>
-				<Alert closeLabel={ohThis}/>
+				<Alert bsStyle="danger" onClick={ohThis}>Saying something important...</Alert>
 			</div>
 		);
 	}
